@@ -36,7 +36,7 @@ for epoch in range(num_epochs):
     for i, (images,labels) in enumerate(train_loader):
         images = images.reshape(-1,28*28)
         out = net(images)
-        
+
         loss = lossFunction(out, labels)
         optimizer.zero_grad()
         loss.backward()
